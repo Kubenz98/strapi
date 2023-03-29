@@ -8,7 +8,7 @@ module.exports = ({ env }) => ({
       user: env('PGUSER', 'strapi'),
       password: env('PGPASSWORD', 'password'),
       ssl: env.bool(true),
-      acquireConnectionTimeout: 5000,
+      acquireConnectionTimeout: 10000,
       pool: {
         min: 0,
         max: 10,
