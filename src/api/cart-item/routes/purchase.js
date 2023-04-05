@@ -3,7 +3,7 @@ module.exports = {
     {
       method: "DELETE",
       path: "/purchase",
-      handler: "cart-item.deleteAll",
+      handler: "cart-item.purchase",
       config: {
         policies: [],
       },
