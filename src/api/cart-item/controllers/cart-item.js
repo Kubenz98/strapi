@@ -143,7 +143,7 @@ module.exports = createCoreController(
           });
         });
         const orderItems = await Promise.all(promises);
-        let totalAmount = orderItems.reduce((sum, item) => sum + item.price, 0);
+        let totalAmount = orderItems.reduce((sum, item) => sum + item.price, 0).toFixed(2);
         await strapi.entityService.update("api::order.order", order.id, {
           data: {
             totalAmount,
